@@ -1,0 +1,452 @@
+/* Main Stylesheet for Student Portfolio project by Rupert Bryant-Greene for Team Treehouse */
+
+/*****************************************
+         ~~~~~  Site Styles  ~~~~~
+*****************************************/
+
+p {
+  
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: 200;
+  color: slategray;
+  
+}
+
+a {
+  
+  color: slategrey;
+  
+}
+
+b {
+  
+  font-weight: 600;
+  
+}
+
+h1 {
+  
+  text-align: center;
+  padding-top: 25px;
+  color: darkslategray;
+  
+}
+
+h2 {
+  
+  text-align: center;
+  font-size: 1em;
+  margin: 50px;
+  color: darkslategray;
+  text-transform: uppercase;
+  
+}
+
+h3 {
+  
+  font-size: 1.3em;
+  font-weight: 500;
+  color: darkslategray;
+  
+}
+
+/*****************************************
+        ~~~~~  Header Styles  ~~~~~
+*****************************************/
+
+ header,
+.main-nav, 
+.profile {
+  
+  display: flex;
+  flex-flow: column;
+  background-color: #fafafa 
+  
+}
+
+header {
+  
+  box-shadow: 0 5px 10px #ddd, inset 0 5px 10px #ddd;
+  
+}
+
+.header-container {
+    
+  max-width: 1366px; 
+  margin: 0 auto;
+    
+  }
+
+.site-title h2 {
+    
+    margin: 10px;
+    text-transform: none;
+    font-size: 1em;
+    font-weight: 400;
+    
+  }
+
+/*****************************************
+         ~~~~~  Nav Styles  ~~~~~
+*****************************************/
+
+.main-nav {
+
+ margin: 10px 0 30px;
+ 
+ }
+
+.main-nav ul {
+  
+  padding: 0;
+  margin: 0;
+  width: 97.5%;
+  align-self: center;
+  list-style: none;
+  
+}
+
+.main-nav a {
+  
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: darkslategray;
+  background-color: white;
+  font-size: 1.125em;
+  text-align: center;
+  padding: 1em;
+  margin: .4em;
+  border-radius: 5px;
+  
+}
+
+.main-nav a:visited {
+  
+  color: #6f6f6f;
+  
+}
+
+.main-nav a:hover {
+  
+  color: #0b0b0b;
+  background-color: #e8e8e8;
+  
+}
+
+.main-nav a:active {
+  
+  color: #0b0b0b;
+  background-color: #fbc955;
+  
+}
+
+/*****************************************
+       ~~~~~  Profile Styles  ~~~~~
+*****************************************/
+
+.profile-text {
+  display: block;
+  padding: 0 0 25px 0;
+  margin: 25px 5% 25px 5%;
+  text-align: center;
+}
+
+.profile-pic {
+  
+  max-height: 225px;
+  max-width: 367px;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  
+}
+
+/*****************************************
+      ~~~~~  Portfolio Styles  ~~~~~
+*****************************************/
+
+.portfolio-content {
+    
+  text-align: center;
+  list-style: none;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 2.5% 50px;
+  display: flex;
+  flex-flow: column;
+
+}
+
+.portfolio-item {
+
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+}
+
+.portfolio-item img {
+  
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  
+  }
+  
+.portfolio-item img:hover {
+
+  opacity: 0.4;
+}
+
+/*****************************************
+      ~~~~~  Contact Styles  ~~~~~
+*****************************************/
+
+.contact {
+
+  padding: 25px;
+  text-align: center;
+    
+}
+
+.contact-content {
+    
+  max-width: 1100px;
+  margin: 0 auto 75px;
+    
+}
+
+/*****************************************
+       ~~~~~  Footer Styles  ~~~~~
+*****************************************/
+
+footer {
+    
+  box-shadow: inset 0 5px 10px #ddd;
+  background-color: #fafafa;
+    
+}
+
+.footer-title {
+  
+  font-size: 1em;
+  margin: 30px auto 0 0;
+  padding: 0.25em 0 0 0;
+  color: slategray;
+  
+}
+
+.footer-nav {
+  
+  display: flex;
+  flex-flow: row;
+  width: 90%;
+  border-top: thin solid lightgrey;
+  margin: 0 auto;
+  
+}
+
+.footer-nav ul {
+  
+  display: none;
+  
+}
+
+.footer-mobiletop {
+  
+  align-self: flex-end;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  
+}
+
+
+/*****************************************
+       ~~~~~  Tablet Styles  ~~~~~
+*****************************************/
+
+@media (min-width: 640px) {
+  
+  
+  /* Nav */
+  
+  .main-nav ul {
+
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    list-style: none;
+
+  }
+
+  .main-nav a {
+
+    background-color: transparent;
+    font-size: 1em;
+    text-align: center;
+    padding: 0.5em;
+    margin: .2em;
+    border-radius: 5px;
+  
+
+  }
+
+  /* Profile */
+  
+  .profile {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }  
+  
+  .profile-text {
+  
+    order: 1;
+    text-align: left;
+    width: 62%;
+    margin: 0 1% 0 3%;
+  }
+  
+  .profile-pic {
+
+    order: 2;
+    width: 40%;
+    height: 100%;
+    margin: 0 3% 50px 1%;
+    
+  }
+
+
+ /* Portfolio */
+
+  
+  .portfolio-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+  .portfolio-item {
+    
+    width: 48%;
+    height: auto;
+    
+  }
+
+  /* Footer */
+
+  .footer-nav ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-self: center;
+
+  }
+
+  .footer-nav a {
+
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: darkslategray;
+    background-color: #fafafa;
+    font-size: 1em;
+    text-align: center;
+    margin: 0.25em 0 0.25em 2em;
+    border-radius: 5px;
+
+  }
+
+  .footer-nav a:visited {
+
+    color: #6f6f6f;
+
+  }
+
+  .footer-nav a:hover {
+
+    color: #0b0b0b;
+
+  }
+
+  .footer-nav a:active {
+
+    color: #0b0b0b;
+
+  }
+
+  .footer-mobiletop {
+
+    display: none;
+
+  }
+
+}
+
+/*****************************************
+       ~~~~~  Desktop Styles  ~~~~~
+*****************************************/
+
+@media (min-width: 1023px) {
+  
+
+  .desktop-nav {
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  
+  .site-title h1 {
+    
+    margin: 20px auto 15px 30px;
+    text-align: left;
+    
+  }
+  
+  
+  .site-title h2 {
+    
+    margin: 10px auto 30px 40px;
+    text-align: left;
+    
+  }
+  
+  
+  .main-nav ul {
+    
+    margin: 40px 0 10px auto;
+    
+  }
+  
+  .main-nav a {
+    
+    margin: 0 auto;
+    padding: 0;
+    
+  }
+  
+    
+  .portfolio-item {
+  
+    width: 32%;
+    height: auto;
+  
+  }
+
+}
+
