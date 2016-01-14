@@ -4,6 +4,24 @@
          ~~~~~  Site Styles  ~~~~~
 *****************************************/
 
+html, body {
+	
+	height: 100%;
+	
+}
+
+body > section:nth-of-type(odd) {
+
+	background-color: #fafafa;
+
+}
+
+body > section:nth-of-type(even) {
+
+	background-color: #fff;
+
+}
+
 p {
   
   font-size: 1.2em;
@@ -29,7 +47,7 @@ h1 {
   
   text-align: center;
   padding-top: 25px;
-  color: darkslategray;
+  color: black;
   
 }
 
@@ -37,7 +55,6 @@ h2 {
   
   text-align: center;
   font-size: 1em;
-  margin: 50px;
   color: darkslategray;
   text-transform: uppercase;
   
@@ -61,13 +78,14 @@ h3 {
   
   display: flex;
   flex-flow: column;
-  background-color: #fafafa 
   
 }
 
 header {
   
-  box-shadow: 0 5px 10px #ddd, inset 0 5px 10px #ddd;
+  box-shadow: inset 1px 4px 9px -6px;
+  padding: 0;
+  margin: 0;
   
 }
 
@@ -75,6 +93,7 @@ header {
     
   max-width: 1366px; 
   margin: 0 auto;
+  padding: 0;
     
   }
 
@@ -88,22 +107,21 @@ header {
   }
 
 /*****************************************
-         ~~~~~  Nav Styles  ~~~~~
+      ~~~~~  Main Nav Styles  ~~~~~
 *****************************************/
 
 .main-nav {
 
- margin: 10px 0 30px;
+ justify-content: center;
  
  }
 
 .main-nav ul {
   
-  padding: 0;
-  margin: 0;
-  width: 97.5%;
-  align-self: center;
   list-style: none;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0;
   
 }
 
@@ -117,9 +135,12 @@ header {
   background-color: white;
   font-size: 1.125em;
   text-align: center;
-  padding: 1em;
-  margin: .4em;
-  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  border-right: thin solid #ddd;
+  border-left: thin solid #ddd;
+  border-radius: 5px; 
+  box-shadow: inset 1px 4px 9px -6px, inset 1px -4px 9px -6px;
   
 }
 
@@ -132,7 +153,7 @@ header {
 .main-nav a:hover {
   
   color: #0b0b0b;
-  background-color: #e8e8e8;
+  background-color: #fefefe;
   
 }
 
@@ -165,89 +186,64 @@ header {
 }
 
 /*****************************************
-      ~~~~~  Portfolio Styles  ~~~~~
+      ~~~~~  Section Styles  ~~~~~
 *****************************************/
 
-.portfolio-content {
-    
-  text-align: center;
+section {
+	
+	margin: 0 auto;
+	padding: 0;
+	box-shadow: inset 1px 4px 9px -6px;
+	
+}
+
+.section-container {
+	
+	text-align: center;
   list-style: none;
   max-width: 1250px;
   margin: 0 auto;
-  padding: 0 2.5% 50px;
+  padding: 50px;
   display: flex;
   flex-flow: column;
+  justify-content: center;
 
-}
-
-.portfolio-item {
-
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-
-}
-
-.portfolio-item img {
-  
-  width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  
-  }
-  
-.portfolio-item img:hover {
-
-  opacity: 0.4;
 }
 
 /*****************************************
-      ~~~~~  Contact Styles  ~~~~~
-*****************************************/
-
-.contact {
-
-  padding: 25px;
-  text-align: center;
-    
-}
-
-.contact-content {
-    
-  max-width: 1100px;
-  margin: 0 auto 75px;
-    
-}
-
-/*****************************************
-       ~~~~~  Footer Styles  ~~~~~
+     ~~~~~  Footer Nav Styles  ~~~~~
 *****************************************/
 
 footer {
     
-  box-shadow: inset 0 5px 10px #ddd;
-  background-color: #fafafa;
+  box-shadow: inset 1px 4px 9px -6px;
+  margin: 0;
+  padding: 0;
     
 }
 
-.footer-title {
-  
-  font-size: 1em;
-  margin: 30px auto 0 0;
-  padding: 0.25em 0 0 0;
-  color: slategray;
-  
+.footer-container {
+	
+	max-width: 1366px;
+	margin: 0 auto;
+  padding: 0;
+	
 }
 
 .footer-nav {
   
   display: flex;
-  flex-flow: row;
+  justify-content: space-between;
   width: 90%;
-  border-top: thin solid lightgrey;
-  margin: 0 auto;
+	margin: 0 auto;
+  
+}
+
+.footer-nav-title {
+  
+  font-size: 1em;
+  margin: 30px 0;
+  padding: 0;
   
 }
 
@@ -259,7 +255,7 @@ footer {
 
 .footer-mobiletop {
   
-  align-self: flex-end;
+  align-self: center;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
@@ -275,16 +271,21 @@ footer {
   
   
   /* Nav */
-  
-  .main-nav ul {
-
-    padding: 0;
-    margin: 15px 0 0;
+ 
+ 	.main-nav {
+ 		
+ 		margin: 25px 0;
     display: flex;
     flex-flow: row;
-    justify-content: center;
     list-style: none;
 
+  }
+  
+  .main-nav ul {
+  
+  	display: inherit;
+  	justify-content: center;
+  	
   }
 
   .main-nav a {
@@ -292,9 +293,8 @@ footer {
     background-color: transparent;
     font-size: 1em;
     text-align: center;
-    padding: 0.5em;
-    margin: .2em;
-    border-radius: 5px;
+    padding: 10px;
+    margin: 0 10px;
   
 
   }
@@ -324,40 +324,20 @@ footer {
     
   }
 
-
- /* Portfolio */
-
-  
-  .portfolio-content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-  }
-  
-  .portfolio-item {
-    
-    width: 48%;
-    height: auto;
-    
-  }
-
   /* Footer */
 
   .footer-nav ul {
 
     list-style: none;
     padding: 0;
-    margin: 30px 0 0 auto;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    align-self: center;
+    display: inherit;
+    align-items: center;
+    margin: 30px 0;
 
   }
 
   .footer-nav a {
 
-    display: block;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -366,7 +346,6 @@ footer {
     font-size: 1em;
     text-align: center;
     margin: 0.25em 0 0.25em 2em;
-    border-radius: 5px;
 
   }
 
@@ -408,12 +387,18 @@ footer {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .site-title {
+  	
+  	widtH: 32%;
+  	
   }
   
   .site-title h1 {
     
-    margin: 20px auto 15px 30px;
+    margin: 20px auto 0 30px;
     text-align: left;
     
   }
@@ -421,23 +406,29 @@ footer {
   
   .site-title h2 {
     
-    margin: 10px auto 30px 40px;
+    margin: 5px auto 30px 40px;
     text-align: left;
     
   }
   
   
-  .main-nav ul {
+  .main-nav {
     
-    margin: 40px 0 10px auto;
+    width: 68%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    
     
   }
   
-  .main-nav a {
-    
-    margin: 0 auto;
-    padding: 0;
-    
+    .main-nav ul {
+
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    list-style: none;
+
   }
   
     
