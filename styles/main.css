@@ -200,10 +200,11 @@ header {
 
 .site-title h2 {
     
-    margin: 10px;
-    text-transform: none;
-    font-size: 1em;
-    font-weight: 400;
+  margin: 10px;
+  padding: 0 0 15px;
+  text-transform: none;
+  font-size: 1em;
+  font-weight: 400;
     
   }
 
@@ -219,9 +220,12 @@ header {
 
 .nav ul {
   
-  list-style: none;
+  display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	list-style: none;
   width: 95%;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 0;
   
 }
@@ -234,10 +238,10 @@ header {
   font-weight: 600;
   color: darkslategray;
   background-color: #fafafa;
-  font-size: 1.125em;
+  font-size: 0.7em;
   text-align: center;
-  padding: 15px;
-  margin: 10px 0;
+  padding: 10px;
+  margin: 0.5em;
   border: thin solid #efefef;
   border-radius: 5px; 
   
@@ -264,11 +268,85 @@ header {
   
 }
 
-.sticky-nav {
+.sticky-navbar {
 	
+	position:fixed;
+	top:0px;
+	width:100%; 
+	margin: 0 auto;
+	z-index:9999;
+	box-shadow: 1px 4px 9px -6px;
+	background-color: white;
 	display: none;
 	
 }
+
+.sticky-container {
+  
+  padding: 0;
+  margin: 0; 
+  max-width: 1366px; 
+  margin: 0 auto;
+  padding: 0;
+    
+}
+
+.sticky-site-title h2 {
+    
+  display: none;
+    
+  }
+
+.sticky-nav ul {
+	
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	list-style: none;
+  width: 95%;
+  margin: 10px auto;
+  padding: 0;
+	
+}
+
+.sticky-nav a {
+	
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: darkslategray;
+  background-color: #fafafa;
+  font-size: 0.7em;
+  text-align: center;
+  padding: 10px;
+  margin: 0.5em;
+  border: thin solid #efefef;
+  border-radius: 5px; 
+	
+}
+
+.sticky-nav a:visited {
+  
+  color: #6f6f6f;
+  
+}
+
+.sticky-nav a:hover {
+  
+  color: #0b0b0b;
+  background-color: white;
+  border: thin solid #ccc;
+  
+}
+
+.sticky-nav a:active {
+  
+  color: #0b0b0b;
+  background-color: #fbc955;
+  
+}
+
 
 /*****************************************
        ~~~~~  Profile Styles  ~~~~~
@@ -351,7 +429,7 @@ section p {
 footer {
     
   box-shadow: inset 1px 4px 9px -6px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
     
 }
@@ -390,10 +468,11 @@ footer {
 
 .footer-mobiletop {
   
-  align-self: center;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
+  text-align: center;
+  padding: 0 0 50px;
   
 }
 
@@ -403,7 +482,7 @@ footer {
   border-width: 75%;
   font-size: 0.75em;
   text-align: center;
-  margin: 0 50px;
+  margin: 0 auto;
   padding: 15px;
   
 }
@@ -445,7 +524,7 @@ footer {
  
   .nav {
  		
- 	margin: 25px 0;
+ 		margin: 10px 0;
     display: flex;
     flex-flow: row;
     list-style: none;
@@ -468,20 +547,42 @@ footer {
   
 
   }
-	
+  
 	.sticky-nav {
-	
-		position: fixed;
-		width: 100%;
-		top: 0;
-		display: flex;
-		flex-flow: column;
-		justify-content: center;
-		background-color: #fafafa;
-  	background-image: url(./img/bg.png);
-  	box-shadow: 1px 4px 9px -6px;
-	
-}
+ 		
+ 		margin: 25px 0;
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+
+  }
+  
+  .sticky-nav ul {
+  
+  	display: inherit;
+  	justify-content: center;
+  	
+  }
+
+  .sticky-nav a {
+
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+    margin: 0 10px;
+  
+
+  }
+  
+  .sticky-site-title h2 {
+    
+  	display: block;
+  	margin: 10px;
+  	text-transform: none;
+  	font-size: 1em;
+  	font-weight: 400;
+    
+  }
 
   /* Profile */
   
@@ -494,6 +595,7 @@ footer {
   .profile-text {
   
     order: 1;
+    align-self: flex-start;
     text-align: left;
     width: 62%;
     height: 100%;
@@ -503,7 +605,7 @@ footer {
   .profile-pic {
 
     order: 2;
-    width: 40%;
+    width: 25%;
     height: 100%;
     margin: 0 3% 50px 1%;
     justify-content: center;
@@ -588,13 +690,17 @@ footer {
 
 @media (min-width: 1023px) {
   
-
+	
+	/* Generic */
+	
   .indent {
   
     padding-left: 50pt;
     padding-right: 50pt;
   
   }
+
+	/* Nav */
   
   .nav-container {
     
@@ -624,14 +730,6 @@ footer {
 
   }
   
-  .sticky-nav {
-  
-		display: flex;
-  	flex-flow: row;
-  	justify-content: space-between;
-  	align-items: center;
-  
-  }
   
   .site-title {
   	
@@ -648,6 +746,58 @@ footer {
   
   
   .site-title h2 {
+    
+    margin: 5px auto 30px 40px;
+    text-align: left;
+    
+  }
+
+	/* Sticky Nav */
+  
+  .sticky-container {
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .sticky-nav {
+    
+    width: 68%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    
+    
+  }
+  
+  .sticky-nav ul {
+
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    list-style: none;
+
+  }
+  
+  
+  .sticky-site-title {
+  	
+  	widtH: 32%;
+  	
+  }
+  
+  .sticky-site-title h1 {
+    
+    margin: 20px auto 0 30px;
+    text-align: left;
+    
+  }
+  
+  
+  .sticky-site-title h2 {
     
     margin: 5px auto 30px 40px;
     text-align: left;

@@ -15,32 +15,14 @@ $(document).ready(function(){
 
 // Sticky header menu (tablet & desktop)
 
-if (document.documentElement.clientWidth > 640) {
-		(function($) {          
-    	$(document).ready(function(){                    
-  	      $(window).scroll(function(){                          
-	            if ($(this).scrollTop() > 200) {
-            	    $('.sticky-nav').fadeIn(500);
-          	  } else {
-        	        $('.sticky-nav').fadeOut(500);
-      	      }
-    	    });
-  	  });
-	})(jQuery);
-}
-
-// Sticky header menu (mobile)
-
-if (document.documentElement.clientWidth < 640) {
-		(function($) {          
-    	$(document).ready(function(){                    
-  	      $(window).scroll(function(){                          
-	            if ($(this).scrollTop() > 200) {
-            	    $('.sticky-nav-mobile').fadeIn(500);
-          	  } else {
-        	        $('.sticky-nav-mobile').fadeOut(500);
-      	      }
-    	    });
-  	  });
-	})(jQuery);
-}
+(function($) {          
+    $(document).ready(function(){                    
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > 200) {
+                $('.sticky-navbar').fadeIn(500);
+            } else {
+                $('.sticky-navbar').fadeOut(500);
+            }
+        });
+    });
+})(jQuery);
