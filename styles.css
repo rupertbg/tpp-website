@@ -211,13 +211,13 @@ header {
       ~~~~~  Main Nav Styles  ~~~~~
 *****************************************/
 
-.main-nav {
+.nav {
 
  justify-content: center;
  
  }
 
-.main-nav ul {
+.nav ul {
   
   list-style: none;
   width: 95%;
@@ -226,7 +226,7 @@ header {
   
 }
 
-.main-nav a {
+.nav a {
   
   display: block;
   text-decoration: none;
@@ -243,13 +243,13 @@ header {
   
 }
 
-.main-nav a:visited {
+.nav a:visited {
   
   color: #6f6f6f;
   
 }
 
-.main-nav a:hover {
+.nav a:hover {
   
   color: #0b0b0b;
   background-color: white;
@@ -257,11 +257,17 @@ header {
   
 }
 
-.main-nav a:active {
+.nav a:active {
   
   color: #0b0b0b;
   background-color: #fbc955;
   
+}
+
+.sticky-nav {
+	
+	display: none;
+	
 }
 
 /*****************************************
@@ -278,8 +284,8 @@ header {
 } 
 
 .profile-text {
-  display: block;
-  padding: 0 0 25px 0;
+	
+	padding: 0 0 25px 0;
   margin: 0 5% 25px 5%;
   text-align: center;
   justify-content: center;
@@ -437,7 +443,7 @@ footer {
   
   /* Nav */
  
-  .main-nav {
+  .nav {
  		
  	margin: 25px 0;
     display: flex;
@@ -446,14 +452,14 @@ footer {
 
   }
   
-  .main-nav ul {
+  .nav ul {
   
   	display: inherit;
   	justify-content: center;
   	
   }
 
-  .main-nav a {
+  .nav a {
 
     font-size: 1em;
     text-align: center;
@@ -462,6 +468,20 @@ footer {
   
 
   }
+	
+	.sticky-nav {
+	
+		position: fixed;
+		width: 100%;
+		top: 0;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		background-color: #fafafa;
+  	background-image: url(./img/bg.png);
+  	box-shadow: 1px 4px 9px -6px;
+	
+}
 
   /* Profile */
   
@@ -576,12 +596,41 @@ footer {
   
   }
   
-  .desktop-nav {
+  .nav-container {
     
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
+    
+  }
+  
+  .nav {
+    
+    width: 68%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    
+    
+  }
+  
+  .nav ul {
+
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    list-style: none;
+
+  }
+  
+  .sticky-nav {
+  
+		display: flex;
+  	flex-flow: row;
+  	justify-content: space-between;
+  	align-items: center;
+  
   }
   
   .site-title {
@@ -605,27 +654,6 @@ footer {
     
   }
   
-  
-  .main-nav {
-    
-    width: 68%;
-    height: 50%;
-    display: flex;
-    flex-direction: row;
-    
-    
-  }
-  
-  .main-nav ul {
-
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    list-style: none;
-
-  }
-  
-    
   section p {
 
     text-align: justify;
