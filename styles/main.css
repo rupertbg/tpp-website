@@ -82,6 +82,15 @@ h3 {
   
 }
 
+.anchor {
+  
+  display: block;
+  position: relative;
+  top: -120px;
+  visibility: hidden;
+
+}
+
 .bigbutton {
   
   text-decoration: none;
@@ -221,11 +230,11 @@ header {
 .nav ul {
   
   display: flex;
-	flex-flow: wrap;
-	justify-content: center;
-	list-style: none;
+  flex-flow: wrap;
+  justify-content: center;
+  list-style: none;
   width: 95%;
-  margin: 10px auto;
+  margin: 1em auto;
   padding: 0;
   
 }
@@ -270,14 +279,14 @@ header {
 
 .sticky-navbar {
 	
-	position:fixed;
-	top:0px;
-	width:100%; 
-	margin: 0 auto;
-	z-index:9999;
-	box-shadow: 1px 4px 9px -6px;
-	background-color: white;
-	display: none;
+  position:fixed;
+  top:0px;
+  width:100%; 
+  margin: 0 auto;
+  z-index:9999;
+  box-shadow: 0px 4px 9px -6px;
+  background-color: rgba(255,255,255,0.98);
+  display: none;
 	
 }
 
@@ -299,10 +308,10 @@ header {
 
 .sticky-nav ul {
 	
-	display: flex;
-	flex-flow: wrap;
-	justify-content: center;
-	list-style: none;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  list-style: none;
   width: 95%;
   margin: 10px auto;
   padding: 0;
@@ -501,6 +510,12 @@ footer {
   
   }
   
+  .anchor {
+  
+    top: -200px;
+
+  }
+  
   .bigbutton {
 
     box-shadow: 0 0 4px black;
@@ -540,17 +555,17 @@ footer {
 
   .nav a {
 
-    font-size: 1em;
+    font-size: 0.8em;
     text-align: center;
-    padding: 10px;
-    margin: 0 10px;
+    padding: 1em;
+    margin: 0.3em;
   
 
   }
   
-	.sticky-nav {
+  .sticky-nav {
  		
- 		margin: 25px 0;
+ 	margin: 25px 0;
     display: flex;
     flex-flow: row;
     list-style: none;
@@ -566,10 +581,10 @@ footer {
 
   .sticky-nav a {
 
-    font-size: 1em;
+    font-size: 0.8em;
     text-align: center;
-    padding: 10px;
-    margin: 0 10px;
+    padding: 1em;
+    margin: 0.3em;
   
 
   }
@@ -699,6 +714,12 @@ footer {
     padding-right: 50pt;
   
   }
+  
+  .anchor {
+  
+    top: -100px;
+
+  }
 
 	/* Nav */
   
@@ -713,10 +734,9 @@ footer {
   
   .nav {
     
-    width: 68%;
-    height: 50%;
     display: flex;
     flex-direction: row;
+    margin: 0 0.9em 0 0;
     
     
   }
@@ -725,15 +745,20 @@ footer {
 
     display: flex;
     flex-flow: row;
-    justify-content: flex-end;
     list-style: none;
 
+  }
+  
+  .nav a {
+    
+    font-size: 0.9em;
+    
   }
   
   
   .site-title {
   	
-  	widtH: 32%;
+  	width: 320px;
   	
   }
   
@@ -765,10 +790,9 @@ footer {
   
   .sticky-nav {
     
-    width: 68%;
-    height: 50%;
     display: flex;
     flex-direction: row;
+    margin: 0 0.9em 0 0;
     
     
   }
@@ -777,15 +801,20 @@ footer {
 
     display: flex;
     flex-flow: row;
-    justify-content: flex-end;
     list-style: none;
 
+  }
+  
+  .sticky-nav a {
+    
+    font-size: 0.9em;
+    
   }
   
   
   .sticky-site-title {
   	
-  	widtH: 32%;
+  	widtH: 320px;
   	
   }
   
