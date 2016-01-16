@@ -277,6 +277,8 @@ header {
   
 }
 
+/* Sticky Nav */
+
 .sticky-navbar {
 	
   position:fixed;
@@ -351,8 +353,21 @@ header {
 
 .sticky-nav a:active {
   
+  color: #fff;
+  background-color: #0f0f0f;
+  
+}
+
+.sticky-nav a.active {
+  
   color: #0b0b0b;
-  background-color: #fbc955;
+  background-color: #dedede;
+  
+}
+
+.sticky-site-title h1 {
+  
+  margin: 0 auto;
   
 }
 
@@ -563,9 +578,11 @@ footer {
 
   }
   
+  /* Sticky Nav */
+  
   .sticky-nav {
  		
- 	margin: 25px 0;
+ 	margin: 0;
     display: flex;
     flex-flow: row;
     list-style: none;
@@ -587,16 +604,6 @@ footer {
     margin: 0.3em;
   
 
-  }
-  
-  .sticky-site-title h2 {
-    
-  	display: block;
-  	margin: 10px;
-  	text-transform: none;
-  	font-size: 1em;
-  	font-weight: 400;
-    
   }
 
   /* Profile */
@@ -628,11 +635,15 @@ footer {
     
   }
   
+  /* Sections */
+  
   section p {
 
     text-align: justify;
 
   }
+  
+  /* Footer */
   
   .footer-nav {
 
@@ -785,6 +796,7 @@ footer {
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
+    margin: -10px 0;
     
   }
   
@@ -793,6 +805,7 @@ footer {
     display: flex;
     flex-direction: row;
     margin: 0 0.9em 0 0;
+    padding: 0;
     
     
   }
@@ -808,19 +821,20 @@ footer {
   .sticky-nav a {
     
     font-size: 0.9em;
+    margin: 0 0.3em 0;
     
   }
   
   
   .sticky-site-title {
   	
-  	widtH: 320px;
+  	width: 320px;
   	
   }
   
   .sticky-site-title h1 {
     
-    margin: 20px auto 0 30px;
+    margin: 0 auto 0 30px;
     text-align: left;
     
   }
@@ -828,8 +842,12 @@ footer {
   
   .sticky-site-title h2 {
     
-    margin: 5px auto 30px 40px;
+    display: block;
+    margin: 5px auto 25px 40px;
     text-align: left;
+  	text-transform: none;
+  	font-size: 1em;
+  	font-weight: 400;
     
   }
   
