@@ -1,5 +1,3 @@
-/* Main Stylesheet for Student Portfolio project by Rupert Bryant-Greene for Team Treehouse */
-
 /*****************************************
          ~~~~~  Site Styles  ~~~~~
 *****************************************/
@@ -509,7 +507,6 @@ footer {
 .credit {
   
   border-top: thin solid #ddd;
-  border-width: 75%;
   font-size: 0.75em;
   text-align: center;
   margin: 0 auto;
