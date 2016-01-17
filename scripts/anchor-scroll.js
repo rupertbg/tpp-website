@@ -24,12 +24,14 @@ $(document).ready(function () {
 	});
 
 	function onScroll(event){
-		var scrollPosition = $(window).scrollTop();
-        var navbarHeight = $('.sticky-navbar').outerHeight() + 1;
+        var windowTop = ( $(window).scrollTop() + $('.sticky-navbar').outerHeight() );
+        var windowMiddle = ( windowTop + $(window).height() / 2);
 		$('.nav-highlight a').each(function () {
 			var currentLink = $(this);
 			var refElement = $(currentLink.attr("href"));
-			if (refElement.position().top - navbarHeight <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+            var refTop = $(refElement).position().top;
+            var refBottom = refTop + ($(refElement).outerHeight());
+			if (refTop <= windowMiddle  && refBottom >= windowMiddle ) {
 				$('.nav-highlight ul li a').removeClass("active");
 				currentLink.addClass("active");
 			}
