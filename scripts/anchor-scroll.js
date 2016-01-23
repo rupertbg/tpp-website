@@ -3,7 +3,7 @@
 $(document).ready(function () {
 		$(document).on("scroll", onScroll);
  
-		$('a[href^="#"]').on('click', function (e) {
+		$('a[href^="index.html#"]').on('click', function (e) {
 			e.preventDefault();
 			$(document).off("scroll");
  
@@ -15,7 +15,7 @@ $(document).ready(function () {
 			var target = this.hash;
 			$target = $(target);
 			$('html, body').stop().animate({
-				'scrollTop': $target.offset().top-$('.sticky-navbar').outerHeight()
+				'scrollTop': $target.offset().top-$('.navbar').outerHeight()
 			}, 400, 'swing', function () {
 				window.location.hash = target;
 				$(document).on("scroll", onScroll);
@@ -24,8 +24,8 @@ $(document).ready(function () {
 	});
 
 	function onScroll(event){
-        var windowTop = ( $(window).scrollTop() + $('.sticky-navbar').outerHeight() );
-        var windowMiddle = ( windowTop + $(window).height() / 2);
+        var windowTop = ( $(window).scrollTop() + $('.navbar').outerHeight() );
+        var windowMiddle = ( (windowTop + $(window).height() / 2) - ($(window).height() / 12));
 		$('.nav-highlight a').each(function () {
 			var currentLink = $(this);
 			var refElement = $(currentLink.attr("href"));
