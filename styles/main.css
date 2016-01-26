@@ -278,7 +278,7 @@ header {
 
 .nav ul {
 
-  display: flex;
+  display: none;
   flex-flow: wrap;
   justify-content: center;
   list-style: none;
