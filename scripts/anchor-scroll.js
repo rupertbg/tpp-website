@@ -1,17 +1,17 @@
-// Navigation anchor position & active selector 
+// Navigation anchor position & active selector
 
 $(document).ready(function () {
 		$(document).on("scroll", onScroll);
- 
+
 		$('a[href^="index.html#"]').on('click', function (e) {
 			e.preventDefault();
 			$(document).off("scroll");
- 
+
 			$('a').each(function () {
 				$(this).removeClass('active');
 			})
 			$(this).addClass('active');
- 
+
 			var target = this.hash;
 			$target = $(target);
 			$('html, body').stop().animate({
@@ -29,7 +29,7 @@ $(document).ready(function () {
 		$('.nav-highlight a').each(function () {
 			var currentLink = $(this);
 			var refElement = $(currentLink.attr("href"));
-            var refTop = $(refElement).position().top;
+            var refTop = $(refElement).top;
             var refBottom = refTop + ($(refElement).outerHeight());
 			if (refTop <= windowMiddle  && refBottom >= windowMiddle ) {
 				$('.nav-highlight ul li a').removeClass("active");
