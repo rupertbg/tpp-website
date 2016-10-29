@@ -1,6 +1,6 @@
 # TrackPad++ Website #
 
-This is the website for Vladimir Plenskiy's brilliant TrackPad++ application for Windows.
+This is the website for the brilliant TrackPad++ application for Windows.
 
 Written to abide by HTML5 and CSS3, the page also has floating navigation and smooth scrolling implemented using jQuery. To edit the speed of the scrolling, you can edit the number found on line 19 of /scripts/anchor-scroll.js in the .animate() method. Scrolling position for link highlighting is calculated as the middle of the viewport less floating navigation height.
 
